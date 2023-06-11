@@ -1,0 +1,51 @@
+
+<button (click)="alternarFormulario()" class="btn-toggle" >Adicionar Empréstimo</button>
+
+<div *ngIf="exibirFormulario">
+  <form (ngSubmit)="salvarEmprestimo()">
+    <select [(ngModel)]="emprestimo.usuarioId" name="usuarioId" required>
+      <option value="">Selecione um usuário</option>
+      <option *ngFor="let usuario of usuarios" [value]="usuario.id">{{ usuario.nome }}</option>
+    </select>
+    
+    <select [(ngModel)]="emprestimo.livroId" name="livroId" required>
+      <option value="">Selecione um livro</option>
+      <option *ngFor="let livro of livros" [value]="livro.id">{{ livro.titulo }}</option>
+    </select>
+
+    <div>
+      <button type="submit" class="btn-toggle">{{ modoEdicao ? 'Editar' : 'Adicionar' }}</button>
+    </div>
+  </form>
+</div>
+
+<table class="generic-table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nome do Usuário</th>
+      <th>E-mail do Usuário</th>
+      <th>Nome do Livro</th>
+      <th>Autor do Livro</th>
+      <th>Data de Empréstimo</th>
+      <th>Data de Devolução</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let emprestimo of emprestimos">
+      <td>{{ emprestimo.id }}</td>
+      <td>{{ emprestimo.nomeUsuario }}</td>
+      <td>{{ emprestimo.emailUsuario }}</td>
+      <td>{{ emprestimo.nomeLivro }}</td>
+      <td>{{ emprestimo.autorLivro }}</td>
+      <td>{{ emprestimo.dataEmprestimo }}</td>
+      <td>{{ emprestimo.dataDevolucao }}</td>
+      <td>
+        <button (click)="devolverEmprestimo(emprestimo)" class="btn-toggle">Devolver</button>
+        <button (click)="editarFormulario(emprestimo)" class="btn-toggle">Editar</button>
+        <button (click)="excluirEmprestimo(emprestimo.id)" class="btn-toggle">Excluir</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

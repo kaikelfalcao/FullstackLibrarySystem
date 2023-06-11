@@ -1,0 +1,40 @@
+<button class="btn-toggle" (click)="alternarFormulario()">Exibir Formulário</button>
+
+<div *ngIf="exibirFormulario" class="user-form">
+  <form (ngSubmit)="salvarUsuario()">
+    <!-- Campos do formulário de usuário -->
+    <input type="text" [(ngModel)]="usuario.nome" [ngModelOptions]="{standalone: true}" placeholder="Nome" required>
+    <input type="text" [(ngModel)]="usuario.cpf" [ngModelOptions]="{standalone: true}" placeholder="CPF" required>
+    <input type="email" [(ngModel)]="usuario.email" [ngModelOptions]="{standalone: true}" placeholder="Email" required>
+    <input type="text" [(ngModel)]="usuario.telefone" [ngModelOptions]="{standalone: true}" placeholder="Telefone" required>
+    <div>
+    <button type="submit" class="btn-toggle">{{ modoEdicao ? 'Editar' : 'Adicionar' }}</button>
+  </div>
+  </form>
+</div>
+
+<table class="user-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>CPF</th>
+        <th>E-mail</th>
+        <th>Telefone</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let usuario of usuarios">
+        <td>{{ usuario.id }}</td>
+        <td>{{ usuario.nome }}</td>
+        <td>{{ usuario.cpf }}</td>
+        <td>{{ usuario.email }}</td>
+        <td>{{ usuario.telefone }}</td>
+        <td>
+          <button class="btn-toggle" (click)="editarUsuario(usuario)">Editar</button>
+          <button class="btn-toggle" (click)="excluirUsuario(usuario.id)">Excluir</button>
+        </td>
+      </tr>
+    </tbody>
+</table>

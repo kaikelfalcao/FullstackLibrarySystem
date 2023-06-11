@@ -1,0 +1,88 @@
+/* Estilo para contêiner do formulário de livros */
+select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 10px;
+  font-size: 16px;
+  width: 90%;
+}
+
+
+.search-bar-container {
+  position: relative;
+  float: right;
+  margin-top: -50px;
+  margin-right: 20px;
+}
+
+
+.btn-toggle {
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.generic-table {
+  margin-top: 16px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.generic-table th,
+.generic-table td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.generic-table th {
+  background-color: #f2f2f2;
+}
+
+/* Estilo para botões de ação na tabela de empréstimos e livros */
+
+.generic-table .btn-toggle{
+  margin-top: 10px;
+}
+
+.form-container {
+  margin-top: 16px;
+}
+
+.form-container .form-group {
+  margin-bottom: 8px;
+}
+
+.form-container label {
+  font-weight: bold;
+}
+
+.form-container input {
+  border-radius: 4px;
+  padding: 8px;
+  width: 90%;
+}
+
+/* Estilo para barra de pesquisa */
+.search-bar {
+  margin-top: 16px;
+}
+
+.search-bar input {
+  padding: 8px;
+  width: 200px;
+  margin-right: 8px;
+}
+
+.search-bar button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
