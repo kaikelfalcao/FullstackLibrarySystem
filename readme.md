@@ -60,7 +60,6 @@ Instanciando e Iniciando o servidor para Windows ou Linux:
 Windows
 ```bash
 python -m venv nome_do_ambiente
-python -m venv nome_do_ambiente
 nome_do_ambiente\Scripts\activate.bat
 pip install -r requirements.txt
 python main.py
