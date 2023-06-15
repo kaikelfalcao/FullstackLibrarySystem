@@ -20,7 +20,7 @@
 
 <h2 id="started">🚀 Se preparando</h2>
 
-Para iniciar essa aplicação siga esses passos
+Para iniciar essa aplicação siga esses passos, estou considerando que o servidor PostGres ja esteja aberto e o banco de dados criado
 
 <h3>Prerequisites</h3>
 
@@ -28,6 +28,8 @@ Para iniciar essa aplicação siga esses passos
 - [PYTHON](https://www.python.org/downloads/)
 - [FLASK](https://flask.palletsprojects.com/en/2.3.x/)
 - [Node](https://nodejs.org/en)
+- [POSTGRES](https://www.postgresql.org/download/)
+
 
 <h3>Cloning</h3>
 
