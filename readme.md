@@ -96,7 +96,7 @@ ng serve
 Com isso basta acessar pelo seu navegador a seguinte URL: http://localhost:4200
 
 
-<h1 id="routes">📍 Application Routes</h1>
+<h2 id="routes">📍 Application Routes</h2>
 
 Como você estará rodando localmente todas as saidas estarão na http://127.0.0.1:5000
 
