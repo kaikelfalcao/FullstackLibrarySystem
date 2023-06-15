@@ -1,6 +1,7 @@
 from sqlalchemy.exc import IntegrityError
 from app.models.usuario import Usuario
 from app.app import db
+from app.models.emprestimo import Emprestimo
 
 class UsuarioDAO:
     def listar_usuarios(self):
@@ -21,6 +22,19 @@ class UsuarioDAO:
             return str(e), 400
     
     def remover_usuario(self, usuario):
+        emprestimos_pendentes = Emprestimo.query.filter_by(usuario_id=usuario.id, data_devolucao=None).all()
+    
+        print(emprestimos_pendentes)
+        
+        if emprestimos_pendentes:
+            return False
+        
+        emprestimos_existentes = Emprestimo.query.filter(Emprestimo.usuario_id == usuario.id, Emprestimo.data_devolucao.isnot(None)).all()
+
+        if emprestimos_existentes:
+            for emprestimo in emprestimos_existentes:
+                db.session.delete(emprestimo)
+
         db.session.delete(usuario)
         db.session.commit()
 

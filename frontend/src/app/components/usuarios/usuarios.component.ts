@@ -77,6 +77,7 @@ export class UsuariosComponent implements OnInit {
       this.carregarUsuarios();
     }, error => {
       console.log('Erro ao excluir usuário:', error);
+      alert('Erro ao excluir Usuário: ' + error.error.message);
     });
   }
 

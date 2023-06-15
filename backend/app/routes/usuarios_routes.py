@@ -3,7 +3,7 @@ from app.controllers.usuario_controller import UsuarioController
 
 usuario_controller = UsuarioController()
 
-# Rotas para usuários
+
 usuarios_bp = Blueprint('usuarios', __name__)
 
 @usuarios_bp.route('/usuarios', methods=['GET'])

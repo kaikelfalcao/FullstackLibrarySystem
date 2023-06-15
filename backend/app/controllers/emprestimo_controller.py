@@ -42,7 +42,7 @@ class EmprestimoController:
     def devolver_emprestimo(self, emprestimo_id):
         emprestimo = emprestimo_dao.obter_emprestimo_por_id(emprestimo_id)
         if emprestimo:
-            emprestimo_dao.atualizar_data_devolucao(emprestimo)  # Atualizar a data de devolução
+            emprestimo_dao.atualizar_data_devolucao(emprestimo)  
             return {'message': 'Empréstimo devolvido com sucesso'}, 200
         else:
             return {'message': 'Empréstimo não encontrado'}, 404

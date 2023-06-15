@@ -65,9 +65,15 @@ class UsuarioController:
     
     def remover_usuario(self, usuario_id):
         usuario = usuario_dao.obter_usuario_por_id(usuario_id)
+        
         if not usuario:
-            return jsonify({'message': 'Usuário não encontrado'}), 404
+            return {'message': 'Usuário não encontrado'}, 404
         
-        usuario_dao.remover_usuario(usuario)
+        resultado = usuario_dao.remover_usuario(usuario)
+
+        if resultado is False:
+            return {'message': 'Não é possível remover o livro. Existem empréstimos pendentes.'}, 400
+
+        return {'message': 'Livro removido com sucesso'}, 200
         
-        return jsonify({'message': 'Usuário removido com sucesso'}), 200
+        
