@@ -20,14 +20,19 @@
 
 <h2 id="started">🚀 Se preparando</h2>
 
-Para iniciar essa aplicação siga esses passos
+Para iniciar essa aplicação siga esses passos, estou considerando que o servidor PostGres ja esteja aberto e o banco de dados criado
 
+Se precisar, siga esse Tutorial: <a href="https://www.youtube.com/watch?v=UbX-2Xud1JA">COMO INSTALAR O POSTGRESQL NO WINDOWS - PARA DEVS</a> 
+
+Caso utilize um sistema Linux, siga esse:  <a href="https://www.youtube.com/watch?v=1jSb4LJH1dw&t=1380s">Instalando o PostgreSQL e pgAdmin no Linux Ubuntu</a>
 <h3>Prerequisites</h3>
 
 
 - [PYTHON](https://www.python.org/downloads/)
 - [FLASK](https://flask.palletsprojects.com/en/2.3.x/)
 - [Node](https://nodejs.org/en)
+- [POSTGRES](https://www.postgresql.org/download/)
+- [ANGULAR](https://angular.io/cli)
 
 <h3>Cloning</h3>
 
@@ -45,7 +50,7 @@ Para começar siga esses Passos:
 cd FullstackLibrarySystem
 cd backend
 ```
-Crie um .env com as seguintes informações e salve na raiz do projeto:
+Crie um .env com as seguintes informações e salve na raiz da pasta backend:
 
 ```bash
 USUARIO_BANCO = "Usuario no postgres"
@@ -53,6 +58,9 @@ SENHA_BANCO = "senha do postgres"
 ENDERECO_BANCO = "localhost"
 NOME_DO_BANCO = "nome do BD"
 ```
+
+Por definição o Usuario no postgres é o "postgres". Caso em algum lugar da .env você utiliza o caractere @ troque por %40, ja que o '@' é um caractere reservado do postgres.
+
 Instanciando e Iniciando o servidor para Windows ou Linux:
 
 Windows
@@ -85,6 +93,7 @@ cd frontend
 Instalando Dependencias
 ```bash
 npm install
+npm install -g @angular/cli
 ```
 
 Após a conclusão da instalação iniciar o servidor Angular
@@ -95,13 +104,13 @@ ng serve
 Com isso basta acessar pelo seu navegador a seguinte URL: http://localhost:4200
 
 
-<h1 id="routes">📍 Application Routes</h1>
+<h2 id="routes">📍 Application Routes</h2>
 
 Como você estará rodando localmente todas as saidas estarão na http://127.0.0.1:5000
 
+
 <h2> Usuários </h2>
 
-​
 | route               | request    | response                                        
 |----------------------|-----------------------------------------------------|---------------------------
 | <kbd>GET /usuarios</kbd>   | None | A lista de Usuários no banco
@@ -136,7 +145,7 @@ Como você estará rodando localmente todas as saidas estarão na http://127.0.0
 
 <h2 id="colab">🤝 Collaborators</h2>
 
-Special thank you for all people that contributed for this project.
+Grupo responsável por elaborar o projeto.
 
 <table>
   <tr>
