@@ -34,6 +34,7 @@ Caso utilize um sistema Linux, siga esse:  <a href="https://www.youtube.com/watc
 - [POSTGRES](https://www.postgresql.org/download/)
 - [ANGULAR](https://angular.io/cli)
 
+
 <h3>Cloning</h3>
 
 Para clonar basta rodar
@@ -65,7 +66,6 @@ Instanciando e Iniciando o servidor para Windows ou Linux:
 
 Windows
 ```bash
-python -m venv nome_do_ambiente
 python -m venv nome_do_ambiente
 nome_do_ambiente\Scripts\activate.bat
 pip install -r requirements.txt
