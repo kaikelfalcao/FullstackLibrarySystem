@@ -60,7 +60,7 @@ ENDERECO_BANCO = "localhost"
 NOME_DO_BANCO = "nome do BD"
 ```
 
-Por definição o Usuario no postgres é o "postgres". Caso em algum lugar da .env você utiliza o caractere @ troque por %40, ja que o '@' é um caractere reservado do postgres.
+Por definição o Usuario no postgres é o "postgres". Caso em algum lugar da .env você utiliza o caractere @ troque por %40, ja que o '@' é um caractere reservado para URI.
 
 Instanciando e Iniciando o servidor para Windows ou Linux:
 
